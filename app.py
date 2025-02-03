@@ -42,7 +42,7 @@ if st.button("Get Sales Response"):
                     {"role": "system", "content": "You are an expert sales advisor."},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=5000,  # Set to a high value to allow longer responses
+                max_tokens=4096,  # Set to a high value to allow longer responses
                 temperature=0.7
             )
             answer = response.choices[0].message['content'].strip()
